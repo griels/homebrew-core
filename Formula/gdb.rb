@@ -4,7 +4,10 @@ class Gdb < Formula
   url "https://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz"
   mirror "https://ftpmirror.gnu.org/gdb/gdb-8.1.tar.xz"
   sha256 "af61a0263858e69c5dce51eab26662ff3d2ad9aa68da9583e8143b5426be4b34"
-
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/master/gdb/0001-darwin-nat.c-handle-Darwin-16-aka-Sierra.patch"
+    sha256 "a71489440781ae133eeba5a3123996e55f72bd914dbfdd3af0b0700f6d0e4e08"
+  end
   bottle do
     sha256 "43a6d6cca157ef70d13848f35c04e11d832dc0c96f5bcf53a43330f524b3ac40" => :high_sierra
     sha256 "fe7c6261f9164e7a744c9c512ba7e5afff0e74e373ece9b5aa19d5da6443bfc2" => :sierra
